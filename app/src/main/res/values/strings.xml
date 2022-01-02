@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">RethinkDNS</string>
-    <string name="app_name_small_case">rethinkdns</string>
+    <string name="app_name">RYP</string>
+    <string name="app_name_small_case">ryp</string>
     <string name="title_about">About</string>
     <string name="title_settings">Settings</string>
     <string name="txt_im_topic">Internet Manager</string>
@@ -22,8 +22,8 @@
 
     <!-- Permission Manager -->
     <string name="accessibility_service_description">
-        RethinkDNS uses accessibility service to detect and firewall background applications.
-        RethinkDNS does not collect or sell any information.
+        RYP uses accessibility service to detect and firewall background applications.
+        RYP does not collect or sell any information.
     </string>
 
     <string name="accessibility_service_label">RethinkDNS</string>
@@ -33,33 +33,35 @@
     <string name="finish">Finish</string>
 
     <string name="slide_2_title">Welcome</string>
-    <string name="slide_2_desc">RethinkDNS is the easiest way to monitor network activity, bypass Internet censorship, and firewall apps on your Android device.</string>
+    <string name="slide_2_desc">RYP is the easiest way to monitor network activity, bypass Internet censorship, and firewall apps on your Android device.</string>
 
     <string name="slide_1_title">Free and Open Source</string>
     <string name="slide_1_desc">RethinkDNS is an open source software backed by Mozilla Builders MVP program.</string>
 
     <string-array name="doh_endpoint_names">
-        <item>Cloudflare</item>
-        <item>Cloudflare Family</item>
-        <item>Cloudflare Security</item>
-        <item>RethinkDNS Basic (default)</item>
-        <item>Custom</item>
-        <item>RethinkDNS Plus</item>
+        <item>RYP SG</item>
+        <item>RYP US NYC</item>
+        <item> RYP US LAX</item>
+        <item>RYP CA BHS</item>
+        <item>RYP UK LON</item>
+        <item>RYP IN BOM</item>
+        <item>RYP DE NGB</item>
     </string-array>
 
     <string-array name="doh_endpoint_urls">
-        <item>https://cloudflare-dns.com/dns-query</item>
-        <item>https://family.cloudflare-dns.com/dns-query</item>
-        <item>https://security.cloudflare-dns.com/dns-query</item>
-        <item>https://basic.bravedns.com/1:IAAgAA==</item>
-        <item>https://cloudflare-dns.com/</item>
-        <item>https://basic.bravedns.com/</item>
+        <item>https://mark-00-sg.ryp.quest/dns-query</item>
+        <item>https://mark-00-nyc.ryp.quest/dns-query</item>
+        <item>https://mark-00-lax.ryp.quest/dns-query</item>
+        <item>https://mark-00-bhs.ryp.quest/dns-query</item>
+        <item>https://mark-00-lon.ryp.quest/dns-query</item>
+        <item>https://mark-00-mi.ryp.quest/dns-query</item>
+        <item>https://mark-00-nbg.ryp.quest/dns-query</item>
     </string-array>
 
     <string-array name="dns_endpoint_modes">
         <item>DNS over HTTPS</item>
-        <item>DNSCrypt</item>
-        <item>DNS Proxy</item>
+        <!--        <item>DNSCrypt</item>-->
+        <!--        <item>DNS Proxy</item>-->
     </string-array>
 
     <string-array name="dns_proxy_names">

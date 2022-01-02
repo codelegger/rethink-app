@@ -91,15 +91,15 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
             AppConfig.BraveMode.DNS.mode -> {
                 b.bsHomeScreenRadioDns.isChecked = true
             }
-            AppConfig.BraveMode.FIREWALL.mode -> {
-                b.bsHomeScreenRadioFirewall.isChecked = true
-            }
-            AppConfig.BraveMode.DNS_FIREWALL.mode -> {
-                b.bsHomeScreenRadioDnsFirewall.isChecked = true
-            }
-            else -> {
-                b.bsHomeScreenRadioDnsFirewall.isChecked = true
-            }
+//            AppConfig.BraveMode.FIREWALL.mode -> {
+//                b.bsHomeScreenRadioFirewall.isChecked = true
+//            }
+//            AppConfig.BraveMode.DNS_FIREWALL.mode -> {
+//                b.bsHomeScreenRadioDnsFirewall.isChecked = true
+//            }
+//            else -> {
+//                b.bsHomeScreenRadioDnsFirewall.isChecked = true
+//            }
         }
     }
 
@@ -113,13 +113,13 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
             handleDNSMode(isSelected)
         }
 
-        b.bsHomeScreenRadioFirewall.setOnCheckedChangeListener { _: CompoundButton, isSelected: Boolean ->
-            handleFirewallMode(isSelected)
-        }
-
-        b.bsHomeScreenRadioDnsFirewall.setOnCheckedChangeListener { _: CompoundButton, isSelected: Boolean ->
-            handleDNSFirewallMode(isSelected)
-        }
+//        b.bsHomeScreenRadioFirewall.setOnCheckedChangeListener { _: CompoundButton, isSelected: Boolean ->
+//            handleFirewallMode(isSelected)
+//        }
+//
+//        b.bsHomeScreenRadioDnsFirewall.setOnCheckedChangeListener { _: CompoundButton, isSelected: Boolean ->
+//            handleDNSFirewallMode(isSelected)
+//        }
 
         b.bsHsDnsRl.setOnClickListener {
             val checked = b.bsHomeScreenRadioDns.isChecked
@@ -129,26 +129,26 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
             handleDNSMode(checked)
         }
 
-        b.bsHsFirewallRl.setOnClickListener {
-            val checked = b.bsHomeScreenRadioFirewall.isChecked
-            if (!checked) {
-                b.bsHomeScreenRadioFirewall.isChecked = true
-            }
-            handleFirewallMode(checked)
-        }
-
-        b.bsHsDnsFirewallRl.setOnClickListener {
-            val checked = b.bsHomeScreenRadioDnsFirewall.isChecked
-            if (!checked) {
-                b.bsHomeScreenRadioDnsFirewall.isChecked = true
-            }
-            handleDNSFirewallMode(checked)
-        }
-
-        b.bsHsWireguardRl.setOnClickListener {
-            showToastUiCentered(requireContext(), getString(R.string.coming_soon_toast),
-                                Toast.LENGTH_SHORT)
-        }
+//        b.bsHsFirewallRl.setOnClickListener {
+//            val checked = b.bsHomeScreenRadioFirewall.isChecked
+//            if (!checked) {
+//                b.bsHomeScreenRadioFirewall.isChecked = true
+//            }
+//            handleFirewallMode(checked)
+//        }
+//
+//        b.bsHsDnsFirewallRl.setOnClickListener {
+//            val checked = b.bsHomeScreenRadioDnsFirewall.isChecked
+//            if (!checked) {
+//                b.bsHomeScreenRadioDnsFirewall.isChecked = true
+//            }
+//            handleDNSFirewallMode(checked)
+//        }
+//
+//        b.bsHsWireguardRl.setOnClickListener {
+//            showToastUiCentered(requireContext(), getString(R.string.coming_soon_toast),
+//                                Toast.LENGTH_SHORT)
+//        }
 
         b.bsHomeScreenVpnLockdownDesc.setOnClickListener {
             Utilities.openVpnProfile(requireContext())
@@ -161,23 +161,23 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
         if (isLockdown) {
             b.bsHomeScreenVpnLockdownDesc.visibility = View.VISIBLE
             b.bsHsDnsRl.alpha = 0.5f
-            b.bsHsFirewallRl.alpha = 0.5f
+//            b.bsHsFirewallRl.alpha = 0.5f
         } else {
             b.bsHomeScreenVpnLockdownDesc.visibility = View.GONE
             b.bsHsDnsRl.alpha = 1f
-            b.bsHsFirewallRl.alpha = 1f
+//            b.bsHsFirewallRl.alpha = 1f
         }
         b.bsHsDnsRl.isEnabled = !isLockdown
-        b.bsHsFirewallRl.isEnabled = !isLockdown
-        b.bsHomeScreenRadioFirewall.isEnabled = !isLockdown
+//        b.bsHsFirewallRl.isEnabled = !isLockdown
+//        b.bsHomeScreenRadioFirewall.isEnabled = !isLockdown
         b.bsHomeScreenRadioDns.isEnabled = !isLockdown
     }
 
     private fun handleDNSMode(isChecked: Boolean) {
         if (!isChecked) return
 
-        b.bsHomeScreenRadioFirewall.isChecked = false
-        b.bsHomeScreenRadioDnsFirewall.isChecked = false
+//        b.bsHomeScreenRadioFirewall.isChecked = false
+//        b.bsHomeScreenRadioDnsFirewall.isChecked = false
         modifyBraveMode(AppConfig.BraveMode.DNS.mode)
     }
 
@@ -185,7 +185,7 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
         if (!isChecked) return
 
         b.bsHomeScreenRadioDns.isChecked = false
-        b.bsHomeScreenRadioDnsFirewall.isChecked = false
+//        b.bsHomeScreenRadioDnsFirewall.isChecked = false
         modifyBraveMode(AppConfig.BraveMode.FIREWALL.mode)
     }
 
@@ -193,7 +193,7 @@ class HomeScreenSettingBottomSheet : BottomSheetDialogFragment() {
         if (!isChecked) return
 
         b.bsHomeScreenRadioDns.isChecked = false
-        b.bsHomeScreenRadioFirewall.isChecked = false
+//        b.bsHomeScreenRadioFirewall.isChecked = false
         modifyBraveMode(AppConfig.BraveMode.DNS_FIREWALL.mode)
     }
 

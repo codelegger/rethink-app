@@ -15,7 +15,7 @@ try {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     signingConfigs {
@@ -76,7 +76,7 @@ android {
 dependencies {
     androidTestImplementation 'androidx.test:rules:1.4.0'
     def koin_version = '3.1.2'
-    def room_version = "2.3.0"
+    def room_version = "2.4.0"
     def paging_version = "2.1.2"
 
     implementation "com.google.guava:guava:30.1-android"

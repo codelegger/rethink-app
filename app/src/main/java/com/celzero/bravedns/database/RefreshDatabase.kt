@@ -644,6 +644,7 @@ class RefreshDatabase internal constructor(private var context: Context,
     private suspend fun insertDefaultDOHList() {
         val urlName = context.resources.getStringArray(R.array.doh_endpoint_names)
         val urlValues = context.resources.getStringArray(R.array.doh_endpoint_urls)
+
         val doHEndpoint1 = DoHEndpoint(id = 1, urlName[0], urlValues[0],
                                        context.getString(R.string.dns_mode_0_explanation),
                                        isSelected = false, isCustom = false,
